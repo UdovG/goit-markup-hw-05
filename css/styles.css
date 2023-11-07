@@ -594,7 +594,7 @@ img {
 
 .subscribe-form {
     display: flex;
-    justify-content: space-between;
+    gap: 24px;
 }
 
 .subscribe-form-text {
@@ -609,37 +609,44 @@ img {
 .subscribe-form-input {
     width: 264px;
     height: 40px;
-    padding: 16px 8px;
+    padding-left: 16px;
     font-size: 12px;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     border-radius: 4px;
     border: 1px solid #FFFFFF;
     outline-offset: 1px;
-    outline-color: transparent;
-    background: #2E2F42;
-    color: #FFFFFF;     
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: transparent;
+    color: #FFFFFF;  
+}
+
+.subscribe-form-input::placeholder {
+    color: #FFFFFF;
 }
 
 .subscribe-btn {
-    display: inline-flex;
+    display: flex;
     margin-left: 24px;
     padding: 8px 24px;
-    text-align: center;
+    min-width: 165px;
+    justify-content: center;
+    align-items: center;
     font-style: inherit;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    gap: 16px;
     border: none;
     border-radius: 4px;
+    cursor: pointer;
     background: #4D5AE5;
     color: #FFFFFF;
 }
 
 .subscribe-btn-icon {
+    margin-left: 16px;
     fill: #FFFFFF;
 }
 
@@ -662,11 +669,11 @@ img {
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is-open {
+/* .backdrop.is-open {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-} 
+}  */
 /* ======== /BACKDROP STYLES ========= */
 
 /* ======== MODAL WINDOW STYLES ========= */
@@ -681,6 +688,8 @@ img {
     background-color: #FCFCFC;
     border-radius: 4px;
     padding: 72px 24px 24px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn-icon {
@@ -697,14 +706,14 @@ img {
     position: absolute;
     top: 24px;
     right: 24px;
-    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     height: 24px;
     width: 24px;
     background: #E7E9FC;
     padding: 0px;
     line-height: 0;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover .modal-close-btn-icon,
@@ -755,6 +764,8 @@ img {
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     padding-left: 38px;
+    background-color: transparent;
+    outline: transparent;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -833,12 +844,13 @@ img {
     cursor: pointer;
     fill: transparent;
     margin-right: 8px;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .review-form-checkbox:checked + 
     .review-form-checkbox-label 
     .review-form-own-checkbox {
+    border: none;
     background-color: #404BBF;
     fill: #F4F4FD;
 }
@@ -851,8 +863,7 @@ img {
 
 .review-form-btn {
     display: block;
-    width: 169px;
-    height: 56px;
+    min-width: 169px;
     text-align: center;
     font-family: inherit;
     font-size: 16px;

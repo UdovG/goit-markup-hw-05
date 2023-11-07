@@ -489,17 +489,19 @@
         <div class="subscribe-form-wrapper">
           <p class="subscribe-form-text">Subscribe</p>
           <form class="subscribe-form">
-            <input
-              class="subscribe-form-input"
-              type="email"
-              name="subscribe_user_email"
-              id="subscribe_user_email"
-              placeholder="E-mail"
-              required
-            />
+            <label class="subscribe-form-label">
+              <input
+                class="subscribe-form-input"
+                type="email"
+                name="subscribe_user_email"
+                id="subscribe_user_email"
+                placeholder="E-mail"
+                required
+              />
+            </label>
             <button class="subscribe-btn" type="submit">
               Subscribe
-              <svg class="subscribe-btn-icon" width="24" height="20">
+              <svg class="subscribe-btn-icon" width="24" height="24">
                 <use href="./images/icons/icons.svg#icon-send"></use>
               </svg>
             </button>
@@ -524,15 +526,15 @@
         </p>
         <form class="review-form">
           <div class="review-form-field-wrapper">
-            <label class="review-form-field-label" for="user_name">
+            <label class="review-form-field-label" for="user-name">
               Name
             </label>
             <div class="review-form-input-wrapper">
               <input
                 class="review-form-field"
                 type="text"
-                name="user_name"
-                id="user_name"
+                name="user-name"
+                id="user-name"
                 required
                 pattern="[a-zA-Zа-яА-яіІїЇєЄґҐ'йЙ]+"
                 title="Olena"
@@ -579,26 +581,27 @@
             </div>
           </div>
           <div class="review-form-field-wrapper">
-            <label class="review-form-field-label" for="user_comment">
+            <label class="review-form-field-label" for="user-comment">
               Comment
             </label>
             <textarea
               class="review-form-massage"
-              name="user_comment"
-              id="user_comment"
+              name="user-comment"
+              id="user-comment"
               placeholder="Text input"
-            ></textarea>
+            >
+            </textarea>
           </div>
           <div class="review-form-checkbox-wrapper">
             <input
               class="review-form-checkbox visually-hidden"
               type="checkbox"
-              name="user_policy"
-              id="user_policy"
+              name="user-policy"
+              id="user-policy"
               value="true"
               required
             />
-            <label class="review-form-checkbox-label" for="user_policy">
+            <label class="review-form-checkbox-label" for="user-policy">
               <span class="review-form-own-checkbox">
                 <svg class="review-own-checkbox-icon" width="10" height="8">
                   <use href="./images/icons/icons.svg#icon-checkmark"></use>
