@@ -727,6 +727,11 @@ img {
     border: none;
 }
 
+
+/* ======== /MODAL WINDOW STYLES ========= */
+
+/* ======== REVIEW FORM STYLES ========= */
+
 .review-form-description {
     font-size: 16px;
     font-weight: 500;
@@ -737,9 +742,6 @@ img {
     margin-bottom: 16px;
 
 }
-/* ======== /MODAL WINDOW STYLES ========= */
-
-/* ======== REVIEW FORM STYLES ========= */
 
 .review-form-field-label {
     display: block;
@@ -753,6 +755,10 @@ img {
 
 .review-form-field-wrapper {
     margin-bottom: 8px;
+}
+
+.review-form-comment-wrapper {
+    margin-bottom: 16px;
 }
 
 .review-form-input-wrapper {
